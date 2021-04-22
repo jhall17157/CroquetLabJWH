@@ -9,6 +9,18 @@
     <h2>Golf Croquet Terms</h2>
 
     <!-- Create a table of GlossaryTerm objects here -->
+   <table>
+        <tr>
+           <th>Term</th>
+           <th>Definition</th>
+           <th>Regulation</th>
+        </tr>
+           <tr th:each = "i : ${terms}">
+               <td th:text="${i.getTerm()}"></td>
+               <td th:text="${i.getDefinition()}"></td>
+               <td th:text="${i.getRegulation()}"></td>
+           </tr>
+   </table>
 
 
 </div>
